@@ -4,8 +4,8 @@ import os
 import json
 from assess import AssessResume
 from extract_data import InformationExtractor
-from entities import AllResumeContents
-from job_entities import CompleteJobProfile
+from resume_entities import AllResumeContents
+from entities import CompleteJobProfile, AllResumeContents
 from util import load_document_using_unstructured
 
 
