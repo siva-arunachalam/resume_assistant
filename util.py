@@ -65,6 +65,7 @@ def initialize_model(model_name:str) ->Union[ChatOpenAI, ChatAnthropic]:
     models: Dict[str, tuple] = {
         'gpt_35': ModelDetail('gpt-3.5-turbo-0125', ChatOpenAI),
         'gpt_4': ModelDetail('gpt-4-turbo-2024-04-09', ChatOpenAI),
+        'gpt_4o': ModelDetail('gpt-4o-2024-05-13', ChatOpenAI),
         'gpt_4_0125': ModelDetail('gpt-4-0125-preview', ChatOpenAI),
         'haiku': ModelDetail('claude-3-haiku-20240307', ChatAnthropic),
         'sonnet': ModelDetail('claude-3-sonnet-20240229', ChatAnthropic),

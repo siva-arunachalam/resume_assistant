@@ -62,6 +62,7 @@ def model_name_from_selection(model_selection: str) -> str:
         "GPT 3.5": "gpt_35",
         "GPT 4 Preview": "gpt_4_0125",
         "GPT 4": "gpt_4",
+        "GPT 4o": "gpt_4o",
         "Haiku": "haiku",
         "Sonnet": "sonnet",
         "Llama 3": "llama3",
@@ -71,7 +72,7 @@ def model_name_from_selection(model_selection: str) -> str:
 
 
 st.set_page_config(
-    page_title="Canidate Assessment", 
+    page_title="Resume Assessment", 
     page_icon=":file_folder:", 
     layout="wide", 
     initial_sidebar_state="expanded"
@@ -83,14 +84,14 @@ with st.sidebar:
     jd = st.file_uploader("Upload Job Description")
     model_for_parsing = st.radio(
         "Select a model to parse documents:", 
-        options=["GPT 3.5", "GPT 4"], 
+        options=["GPT 3.5", "GPT 4", "GPT 4o"], 
         horizontal=True, 
         index=0
     )
     parsing_model_name = model_name_from_selection(model_for_parsing)
     model_for_assessment = st.radio(
         "Select a model to assess candidate qualification:", 
-        options=["GPT 3.5", "GPT 4"], 
+        options=["GPT 3.5", "GPT 4", "GPT 4o"], 
         horizontal=True, 
         index=1
     )

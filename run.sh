@@ -1,4 +1,4 @@
-docker kill rsm
+docker kill resume
 sleep 1
 
 docker run \
